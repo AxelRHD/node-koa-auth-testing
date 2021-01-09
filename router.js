@@ -7,7 +7,7 @@ const router = new Router()
 const token = jwt.sign({ sub: 1 }, jwt_secrets[0])
 
 router.get("/", async (ctx) => {
- //ctx.body = "Hello from Koa!"
+ ctx.state.greet = "from Koa with Marko"
  await ctx.render("main")
 })
 
