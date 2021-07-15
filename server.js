@@ -22,12 +22,12 @@ app
   }))
 
 // ROUTES
-
-
-// APPLICATION
 app
   .use(router.routes())
   .use(router.allowedMethods())
+
+// APPLICATION
+app
   .listen(port, () => {
-    `Server listening on port ${port}`
+    console.log(`Server listening on port ${port}.`)
   })
